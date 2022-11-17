@@ -1,6 +1,8 @@
 ---
 title: "Quarto Document"
 author: "Norah Jones"
+format: pdf
+
 toc: true
 number-sections: true
 highlight-style: pygments

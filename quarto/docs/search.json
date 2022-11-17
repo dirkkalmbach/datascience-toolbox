@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "computations.html",
+    "href": "computations.html",
+    "title": "Quarto Computations",
+    "section": "",
+    "text": "import numpy as np\na = np.arange(15).reshape(3, 5)\na\n\narray([[ 0,  1,  2,  3,  4],\n       [ 5,  6,  7,  8,  9],\n       [10, 11, 12, 13, 14]])"
+  },
+  {
+    "objectID": "computations.html#matplotlib",
+    "href": "computations.html#matplotlib",
+    "title": "Quarto Computations",
+    "section": "Matplotlib",
+    "text": "Matplotlib\n\nimport matplotlib.pyplot as plt\n\nfig = plt.figure()\nx = np.arange(10)\ny = 2.5 * np.sin(x / 20 * np.pi)\nyerr = np.linspace(0.05, 0.2, 10)\n\nplt.errorbar(x, y + 3, yerr=yerr, label='both limits (default)')\nplt.errorbar(x, y + 2, yerr=yerr, uplims=True, label='uplims=True')\nplt.errorbar(x, y + 1, yerr=yerr, uplims=True, lolims=True,\n             label='uplims=True, lolims=True')\n\nupperlimits = [True, False] * 5\nlowerlimits = [False, True] * 5\nplt.errorbar(x, y, yerr=yerr, uplims=upperlimits, lolims=lowerlimits,\n             label='subsets of uplims and lolims')\n\nplt.legend(loc='lower right')\nplt.show(fig)"
+  },
+  {
+    "objectID": "computations.html#plotly",
+    "href": "computations.html#plotly",
+    "title": "Quarto Computations",
+    "section": "Plotly",
+    "text": "Plotly\n\n\"\"\"\n#| label: fig-gapminder\n#| fig-cap: Life Expectancy and GDP\n#| fig-subcap:\n#|   - \"Gapminder: 1957\"\n#|   - \"Gapminder: 2007\"\n#| layout-ncol: 2\n#| column: page\n\nimport plotly.express as px\nimport plotly.io as pio\ngapminder = px.data.gapminder()\ndef gapminder_plot(year):\n    gapminderYear = gapminder.query(\"year == \" + \n                                    str(year))\n    fig = px.scatter(gapminderYear, \n                     x=\"gdpPercap\", y=\"lifeExp\",\n                     size=\"pop\", size_max=60,\n                     hover_name=\"country\")\n    fig.show()\n    \ngapminder_plot(1957)\ngapminder_plot(2007)\n\"\"\"\n\n'\\n#| label: fig-gapminder\\n#| fig-cap: Life Expectancy and GDP\\n#| fig-subcap:\\n#|   - \"Gapminder: 1957\"\\n#|   - \"Gapminder: 2007\"\\n#| layout-ncol: 2\\n#| column: page\\n\\nimport plotly.express as px\\nimport plotly.io as pio\\ngapminder = px.data.gapminder()\\ndef gapminder_plot(year):\\n    gapminderYear = gapminder.query(\"year == \" + \\n                                    str(year))\\n    fig = px.scatter(gapminderYear, \\n                     x=\"gdpPercap\", y=\"lifeExp\",\\n                     size=\"pop\", size_max=60,\\n                     hover_name=\"country\")\\n    fig.show()\\n    \\ngapminder_plot(1957)\\ngapminder_plot(2007)\\n'\n\n\n\nimport numpy as np\na = np.arange(15).reshape(3, 5)\na\n\narray([[ 0,  1,  2,  3,  4],\n       [ 5,  6,  7,  8,  9],\n       [10, 11, 12, 13, 14]])"
+  },
+  {
+    "objectID": "hello.html",
+    "href": "hello.html",
+    "title": "Quarto Basics",
+    "section": "",
+    "text": "For a demonstration of a line plot on a polar axis, see Figure 1.\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 4 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\nFigure 1: A line plot on a polar axis"
+  }
+]
