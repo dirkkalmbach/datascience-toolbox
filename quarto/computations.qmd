@@ -39,3 +39,37 @@ plt.show(fig)
 ```
 
 ## Plotly
+```{python}
+"""
+#| label: fig-gapminder
+#| fig-cap: Life Expectancy and GDP
+#| fig-subcap:
+#|   - "Gapminder: 1957"
+#|   - "Gapminder: 2007"
+#| layout-ncol: 2
+#| column: page
+
+import plotly.express as px
+import plotly.io as pio
+gapminder = px.data.gapminder()
+def gapminder_plot(year):
+    gapminderYear = gapminder.query("year == " + 
+                                    str(year))
+    fig = px.scatter(gapminderYear, 
+                     x="gdpPercap", y="lifeExp",
+                     size="pop", size_max=60,
+                     hover_name="country")
+    fig.show()
+    
+gapminder_plot(1957)
+gapminder_plot(2007)
+"""
+```
+
+```{python}
+#| echo: true
+
+import numpy as np
+a = np.arange(15).reshape(3, 5)
+a
+```
