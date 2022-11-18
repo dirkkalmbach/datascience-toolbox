@@ -1,0 +1,7 @@
+---
+title: Dirkiboys quarto website
+---
+
+This is Dirkiboys 😎 `quarto` website!
+
+- [hello](hello.qmd)

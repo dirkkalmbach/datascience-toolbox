@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Dirkiboys quarto website",
+    "section": "",
+    "text": "hello"
+  },
+  {
     "objectID": "hello.html",
     "href": "hello.html",
     "title": "Quarto Basics",
