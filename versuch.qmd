@@ -1,0 +1,77 @@
+---
+title: "Versuch"
+format:
+  html:
+    code-fold: true
+jupyter: python3
+---
+
+For a demonstration of a line plot on a polar axis, see @fig-polar.
+
+```{python}
+#| label: fig-polar
+#| fig-cap: "A line plot on a polar axis"
+
+import numpy as np
+import pandas as pd
+```
+
+## Observable JS
+
+Quarto includes native support for [Observable JS](https://observablehq.com/@observablehq/observables-not-javascript), a set of enhancements to vanilla JavaScript created by [Mike Bostock](https://en.wikipedia.org/wiki/Mike_Bostock) (also the author of [D3](https://d3js.org/)). Observable JS is distinguished by its [reactive runtime](https://github.com/observablehq/runtime), which is especially well suited for interactive data exploration and analysis.
+
+Here's an example that provides slider inputs to condition the behavior of a visualization:
+
+```{ojs}
+//| panel: sidebar
+viewof talentWeight = Inputs.range([-2, 2], { value: 0.7, step: 0.01, label: "talent weight" })
+viewof looksWeight = Inputs.range([-2, 2], { value: 0.7, step: 0.01, label: "looks weight" })
+viewof minimum = Inputs.range([-2, 2], { value: 1, step: 0.01, label: "minimum fame" })
+```
+
+# D3 
+To use D3 in an {ojs} cell, first import it using the require function (which loads modules hosted at jsDelivr):
+
+```{ojs}
+d3 = require("d3@7")
+```
+
+Then, use d3 as needed to create your visualization. For example, here are the first few lines of the cell that creates the visualization above:
+
+```{ojs}
+sunburst = {
+  var flareData=[1,2,3];
+  const root = partition(flareData);
+  root.each(d => d.current = d);
+  const svg = d3.create("svg")
+      .attr("viewBox", [0, 0, width, width])
+      .style("font", "15px sans-serif");
+
+  // ...remainder of implementation
+  
+  return svg.node();
+}
+```
+
+## some other JS -> loading csv
+
+```{ojs}
+athletes = FileAttachment("athletes.csv").csv({typed: true})
+
+Plot.plot({
+  grid: true,
+  facet: {
+    data: athletes,
+    y: "sex"
+  },
+  marks: [
+    Plot.rectY(
+      athletes, 
+      Plot.binX({y: "count"}, {x: "weight", fill: "sex"})
+    ),
+    Plot.ruleY([0])
+  ]
+})
+```
+
+
