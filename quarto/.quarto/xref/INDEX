@@ -1,0 +1,13 @@
+{
+  "authoring.qmd": {
+    "authoring.html": "db42dec7",
+    "authoring.tex": "790ce0f2",
+    "authoring.docx": "74447fc1"
+  },
+  "computations.qmd": {
+    "computations.html": "b3b74e43"
+  },
+  "hello.qmd": {
+    "hello.html": "f7606bdb"
+  }
+}
