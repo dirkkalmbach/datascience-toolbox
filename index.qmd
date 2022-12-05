@@ -5,4 +5,5 @@ title: Dirkiboys quarto website
 This is Dirkiboys 😎 `quarto` website!
 
 - [hello](hello.qmd)  
-- [versuch](versuch.qmd)
+- [javascript in Quarto](javascript.qmd)
+- [D3 in Quarto](d3.qmd)

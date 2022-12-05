@@ -18,14 +18,14 @@
     "href": "hello.html",
     "title": "Quarto Basics",
     "section": "",
-    "text": "Code\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\n#theta = 2 * np.pi * r\ntheta = 4 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\nFigure 1: A line plot on a polar axis"
+    "text": "Code\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\n#theta = 2 * np.pi * r\ntheta = 4 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\nFigure 1: A line plot on a polar axis\n\n\n\n\nand next …\n\n\nCode\n#INSTALLATION\nfrom PyDictionary import PyDictionary\ndictionary=PyDictionary()\n\n# MEANINGS\nprint (dictionary.meaning(\"indentation\"))\n\n\n{'Noun': ['a concave cut into a surface or edge (as in a coastline', 'the formation of small pits in a surface as a consequence of corrosion', 'the space left between the margin and the start of an indented line', 'the act of cutting into an edge with toothlike notches or angular incisions']}"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Dirkiboys quarto website",
     "section": "",
-    "text": "hello\n\nversuch"
+    "text": "hello\n\njavascript in Quarto\nD3 in Quarto"
   },
   {
     "objectID": "versuch.html#some-other-js---loading-csv",
@@ -33,5 +33,40 @@
     "title": "Versuch",
     "section": "some other JS -> loading csv",
     "text": "some other JS -> loading csv\n\n\nCode\nathletes = FileAttachment(\"athletes.csv\").csv({typed: true})\n\nPlot.plot({\n  grid: true,\n  facet: {\n    data: athletes,\n    y: \"sex\"\n  },\n  marks: [\n    Plot.rectY(\n      athletes, \n      Plot.binX({y: \"count\"}, {x: \"weight\", fill: \"sex\"})\n    ),\n    Plot.ruleY([0])\n  ]\n})"
+  },
+  {
+    "objectID": "javascript.html",
+    "href": "javascript.html",
+    "title": "Javascript in quarto",
+    "section": "",
+    "text": "For a demonstration of a line plot on a polar axis, see Figure 1."
+  },
+  {
+    "objectID": "javascript.html#observable-js",
+    "href": "javascript.html#observable-js",
+    "title": "Javascript in quarto",
+    "section": "Observable JS",
+    "text": "Observable JS\n\n\nQuarto includes native support for Observable JS, a set of enhancements to vanilla JavaScript created by Mike Bostock (also the author of D3). Observable JS is distinguished by its reactive runtime, which is especially well suited for interactive data exploration and analysis.\nHere’s an example that provides slider inputs to condition the behavior of a visualization:\n\n\n\nCode\nviewof talentWeight = Inputs.range([-2, 2], { value: 0.7, step: 0.01, label: \"talent weight\" })\nviewof looksWeight = Inputs.range([-2, 2], { value: 0.7, step: 0.01, label: \"looks weight\" })\nviewof minimum = Inputs.range([-2, 2], { value: 1, step: 0.01, label: \"minimum fame\" })"
+  },
+  {
+    "objectID": "javascript.html#some-other-js---loading-csv",
+    "href": "javascript.html#some-other-js---loading-csv",
+    "title": "Javascript in quarto",
+    "section": "some other JS -> loading csv",
+    "text": "some other JS -> loading csv\n\n\nCode\nathletes = FileAttachment(\"athletes.csv\").csv({typed: true})\n\nPlot.plot({\n  grid: true,\n  facet: {\n    data: athletes,\n    y: \"sex\"\n  },\n  marks: [\n    Plot.rectY(\n      athletes, \n      Plot.binX({y: \"count\"}, {x: \"weight\", fill: \"sex\"})\n    ),\n    Plot.ruleY([0])\n  ]\n})"
+  },
+  {
+    "objectID": "d3.html",
+    "href": "d3.html",
+    "title": "D3.js in Quarto",
+    "section": "",
+    "text": "Basics\n\n```{ojs}\nthisMakesSenseSoFar = true;\nfruit = [{ kind: \"grape\", color: \"red\", quantity: 12, tasty: true}];\nfruit[].color;\nsvg = d3.create(\"svg\")\n      .attr(\"width\", width)\n      .attr(\"height\", height)\n      .attr(\"viewBox\", [0, 0, width, height])\n      .attr(\"style\", \"max-width: 100%; height: auto; height: intrinsic;\")\n      .attr(\"fill\", \"red\");\nsvg.node();\n```\n\n\n\n\n\n\n\nOJS Syntax Error (line 19, column 7)Unexpected token\n\n\n\n\n\n\n\n\n\n\nHistogram\n\n\nCode\nd3 = require(\"d3@7\")\nimport {Histogram} from \"@d3/histogram\"\n\ndata = {\n  const text = await FileAttachment(\"temperature.csv\").text();\n  const parseDate = d3.utcParse(\"%Y-%m-%d\");\n  return d3.csvParse(text, ({date, temperature}) => ({\n    date: parseDate(date),\n    temperature: +temperature\n  }));\n}\n\nd3.extent(data, d => d.date);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode\nheight = 200;\nHistogram(data, {value: d => d.temperature, width, height});\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLearn D3: Scales\n\n\nCode\nimport {Legend} from \"@d3/color-legend\";\nwidth = 640;\nmargin = ({top: 20, right: 0, bottom: 0, left: 30});\n\n\n\nfruits = [\n  {name: \"🍊\", count: 21},\n  {name: \"🍇\", count: 13},\n  {name: \"🍏\", count: 8},\n  {name: \"🍌\", count: 5},\n  {name: \"🍐\", count: 3},\n  {name: \"🍋\", count: 2},\n  {name: \"🍎\", count: 1},\n  {name: \"🍉\", count: 1}\n];\n\nfruits.map(d => d.count);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode\nx = d3.scaleLinear()\n    .domain([0, d3.max(fruits, d => d.count)])\n    .range([margin.left, width - margin.right])\n    .interpolate(d3.interpolateRound)\n\ny = d3.scaleBand()\n    .domain(fruits.map(d => d.name))\n    .range([margin.top, height - margin.bottom])\n    .padding(0.1)\n    .round(true);"
+  },
+  {
+    "objectID": "some_notebook.html",
+    "href": "some_notebook.html",
+    "title": "Quarto Basics",
+    "section": "",
+    "text": "Code\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\n#theta = 2 * np.pi * r\ntheta = 4 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\nFigure 1: ?(caption)\n\n\nand next …"
   }
 ]
