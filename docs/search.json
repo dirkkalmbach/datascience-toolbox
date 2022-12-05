@@ -18,14 +18,14 @@
     "href": "hello.html",
     "title": "Quarto Basics",
     "section": "",
-    "text": "Code\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\n#theta = 2 * np.pi * r\ntheta = 4 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\nFigure 1: A line plot on a polar axis\n\n\n\n\nand next …\n\n\nCode\n#INSTALLATION\nfrom PyDictionary import PyDictionary\ndictionary=PyDictionary()\n\n# MEANINGS\nprint (dictionary.meaning(\"indentation\"))\n\n\n{'Noun': ['a concave cut into a surface or edge (as in a coastline', 'the formation of small pits in a surface as a consequence of corrosion', 'the space left between the margin and the start of an indented line', 'the act of cutting into an edge with toothlike notches or angular incisions']}"
+    "text": "Code\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\n#theta = 2 * np.pi * r\ntheta = 4 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\nFigure 1: A line plot on a polar axis\n\n\n\n\nand next …\n\n\nCode\n#INSTALLATION\nfrom PyDictionary import PyDictionary\ndictionary=PyDictionary()\n\n# MEANINGS\nprint (dictionary.meaning(\"indentation\"))\n\n\n{'Noun': ['a concave cut into a surface or edge (as in a coastline', 'the formation of small pits in a surface as a consequence of corrosion', 'the space left between the margin and the start of an indented line', 'the act of cutting into an edge with toothlike notches or angular incisions']}\n\n\nAnd now trying some Tkinter:\n\n\nCode\nfrom tkinter import *\nfrom tkinter import ttk\nroot = Tk()\nfrm = ttk.Frame(root, padding=10)\nfrm.grid()\nttk.Label(frm, text=\"Hello World!\").grid(column=0, row=0)\nttk.Button(frm, text=\"Quit\", command=root.destroy).grid(column=1, row=0)\nroot.mainloop()"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Dirkiboys quarto website",
     "section": "",
-    "text": "hello\n\njavascript in Quarto\nD3 in Quarto"
+    "text": "This is Dirkiboys 😎 quarto website!"
   },
   {
     "objectID": "versuch.html#some-other-js---loading-csv",
@@ -68,5 +68,82 @@
     "title": "Quarto Basics",
     "section": "",
     "text": "Code\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\n#theta = 2 * np.pi * r\ntheta = 4 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\nFigure 1: ?(caption)\n\n\nand next …"
+  },
+  {
+    "objectID": "new.html",
+    "href": "new.html",
+    "title": "New",
+    "section": "",
+    "text": "Code\nimport numpy as np\nimport matplotlib.pyplot as plt\n\ndf = np.linspace(1,10,10)\nprint(df)\n\n\n[ 1.  2.  3.  4.  5.  6.  7.  8.  9. 10.]\n\nFigure 1: ?(caption)"
+  },
+  {
+    "objectID": "lightbox.html",
+    "href": "lightbox.html",
+    "title": "Simple Lightbox Example",
+    "section": "",
+    "text": "A Lovely Image\n\n\n\n\n\nAnother Lovely Image\n\n\n\n\n\nThe Last Lovely Image"
+  },
+  {
+    "objectID": "extensions.html",
+    "href": "extensions.html",
+    "title": "Quarto Extensions",
+    "section": "",
+    "text": "produces Error 🤨\n\n\n\nquarto install extension quarto-ext/fontawesome"
+  },
+  {
+    "objectID": "extensions/fontawesome.html",
+    "href": "extensions/fontawesome.html",
+    "title": "Font Awesome",
+    "section": "",
+    "text": "quarto install extension quarto-ext/fontawesome\n\n\n\n\n\n\n\nhello"
+  },
+  {
+    "objectID": "extensions/lightbox.html",
+    "href": "extensions/lightbox.html",
+    "title": "Complete Lightbox Example",
+    "section": "",
+    "text": "A Lovely Image"
+  },
+  {
+    "objectID": "index.html#extensions",
+    "href": "index.html#extensions",
+    "title": "Dirkiboys quarto website",
+    "section": "Extensions",
+    "text": "Extensions\n\nFont Awesome\n\nlightbox"
+  },
+  {
+    "objectID": "extensions/lightbox.html#without-lightbox",
+    "href": "extensions/lightbox.html#without-lightbox",
+    "title": "Complete Lightbox Example",
+    "section": "Without lightbox",
+    "text": "Without lightbox\n\n\n\nThe Last Lovely Image"
+  },
+  {
+    "objectID": "extensions/nutshell.html",
+    "href": "extensions/nutshell.html",
+    "title": "Nutshell Example",
+    "section": "",
+    "text": "Nutshell is a tool to make “expandable explanations”, like this! This lets your readers learn only the details they need, just-in-time, always-in-context.\nUnlike links, Nutshell lets you include only the snippet you need, not the whole page. Plus, instead of being lost in a jungle of new tabs, your reader stays on one page, keeping their flow of reading. Even if you interrupt a sentence, Nutshell recaps the sentence afterwards, so your reader never loses context.\nYou can find more information on the nutshell webpage"
+  },
+  {
+    "objectID": "extensions/nutshell.html#test",
+    "href": "extensions/nutshell.html#test",
+    "title": "Nutshell Example",
+    "section": "Test",
+    "text": "Test\nThis is a senseless paragraph"
+  },
+  {
+    "objectID": "extensions/nutshell.html#testing-links",
+    "href": "extensions/nutshell.html#testing-links",
+    "title": "Nutshell Example",
+    "section": "Testing Links",
+    "text": "Testing Links\n\n:link to senseless paragraph\n\n:link to wikipedia article\n:link to invisible sections"
+  },
+  {
+    "objectID": "extensions/nutshell.html#x-invisible",
+    "href": "extensions/nutshell.html#x-invisible",
+    "title": "Nutshell Example",
+    "section": ":x invisible",
+    "text": ":x invisible\nUse ## :x header to include an invisible secion that can be linked to via nutshell"
   }
 ]

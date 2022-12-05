@@ -1,0 +1,22 @@
+---
+title: Complete Lightbox Example
+filters:
+  - lightbox
+lightbox:
+  match: auto
+  effect: fade
+  desc-position: right
+  loop: false
+  css-class: "my-css-class"
+---
+
+![A Lovely Image](../images/mv-1.jpg){group="my-gallery"}
+
+![Another Lovely Image](../images/mv-2.jpg){group="my-gallery"}
+
+![The Last Lovely Image](../images/mv-3.jpg){group="my-gallery"}
+
+---
+
+## Without `lightbox` 
+![The Last Lovely Image](../images/mv-3.jpg)   

@@ -1,0 +1,20 @@
+---
+title: "Font Awesome"
+format:
+  html:
+    code-fold: true
+jupyter: python3
+---
+
+# [Font Awesome](https://github.com/quarto-ext/fontawesome)
+
+## Installation   
+`quarto install extension quarto-ext/fontawesome`
+
+## Using
+{{< fa thumbs-up >}} 
+
+
+## Sizing
+
+hello

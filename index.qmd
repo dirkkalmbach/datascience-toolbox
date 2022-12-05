@@ -7,3 +7,8 @@ This is Dirkiboys 😎 `quarto` website!
 - [hello](hello.qmd)  
 - [javascript in Quarto](javascript.qmd)
 - [D3 in Quarto](d3.qmd)
+
+## Extensions
+- [Font Awesome](extensions/fontawesome.qmd)  
+- [lightbox](extensions/lightbox.qmd)   
+- [nutshell](extensions/nutshell.qmd)    
