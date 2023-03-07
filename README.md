@@ -9,14 +9,13 @@
 ## Pandas 
 <img align="right" src="https://user-images.githubusercontent.com/7769683/220074028-244d92a6-2253-466a-afac-0a97fc98a74e.png" height="100" alt="Pandas Logo"> 
 
-- asdfadsf
-- asdfasdf
+- [Cheatsheet](Python/Pandas/Cheatsheet.md) 
 
 <br>
 
 ## Pytube
-- [Notes](Pytube/README.md)  
-- [Code (Notebook)](Pytube/Notebook.ipynb)
+- [Notes](Python/Pytube/README.md)  
+- [Code (Notebook)](Python/Pytube/Notebook.ipynb)
 
 
 # DevOps  
