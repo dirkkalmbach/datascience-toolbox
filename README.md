@@ -1,16 +1,20 @@
 # DataScience Toolbox 👩🏾‍💻🛠⚙️🧰  
 >my personal repo for learning and experimenting with `Python` libraries, devtools, frameworks, etc.
 
-- every devtool = one folder 
+- every tool = one folder 
 
-<h1 align="center">Python</h1>
+# Python
 <br>
 
 ## Pandas 
 <img align="right" src="https://user-images.githubusercontent.com/7769683/220074028-244d92a6-2253-466a-afac-0a97fc98a74e.png" height="100" alt="Pandas Logo"> 
 
+- asdfadsf
+- asdfasdf
+
 <br>
-<h1 align="center">DevOps Tools</h1>
+
+# DevOps  
 <br>
 
 ## Git 
@@ -21,3 +25,8 @@
 - [Cheetsheat](Git/cheatsheet/README.md)
 
 <br>
+
+# Mac-Stuff
+## Terminal
+- [Notes](Terminal/README.md)
+- [Cheatsheet](Mac/Terminal/Cheatsheet.md)
